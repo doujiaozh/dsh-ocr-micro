@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+*.tar
+*.tar.gz
+*.tmp
+cache/
+__pycache__/
+*.pyc
+.DS_Store
+# regenerable synthetic benchmark images (benchmark/gen_synth.py)
+benchmark/data/

@@ -1,0 +1,8 @@
+# benchmark-local artifacts (datasets, generated images, reports)
+data/
+out/
+# python
+__pycache__/
+*.pyc
+# local node_modules if ever added
+node_modules/

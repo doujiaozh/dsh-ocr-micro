@@ -1,0 +1,41 @@
+{
+  "name": "dsh-ocr-micro",
+  "version": "1.0.0",
+  "description": "DSH OCR Micro - World-class Chinese/English OCR under a 5.5MB model budget. Pure Node.js/TypeScript + ONNX Runtime (node/WASM). Windows 7 friendly, zero C++ compilation.",
+  "license": "Apache-2.0",
+  "author": "DeepSeek Harness Agent Team",
+  "private": true,
+  "workspaces": [
+    "model_forge",
+    "cv_preprocess",
+    "ocr_infer",
+    "benchmark"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "models": "node model_forge/download.js",
+    "compress": "python model_forge/quantize.py",
+    "prune": "python model_forge/prune.py",
+    "distill": "python model_forge/distill.py",
+    "verify": "node model_forge/verify_onnx.js",
+    "ocr": "node dist/ocr_infer/src/cli.js",
+    "smoke": "node dist/ocr_infer/src/smoke.js",
+    "smoke:cv": "node dist/cv_preprocess/src/smoke.js",
+    "bench": "node benchmark/run_all.js",
+    "bench:speed": "node benchmark/bench_speed.js"
+  },
+  "devDependencies": {
+    "@types/jpeg-js": "^0.3.7",
+    "@types/node": "^20.14.0",
+    "@types/pngjs": "^6.0.5",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "onnxruntime-web": "^1.31.1"
+  }
+}

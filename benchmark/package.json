@@ -1,0 +1,22 @@
+{
+  "name": "@dsh-ocr/benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "World-class benchmark suite for DSH-OCR-Micro: ICDAR2015/2013 datasets, synthetic fallback, detection (IoU/F1), recognition (CER/NED), latency p50/p95 vs 5.5MB budget, published-baseline comparison.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "datasets": "node datasets.js --list",
+    "synth": "python gen_synth.py",
+    "det": "node run_det.js",
+    "eval:det": "node eval_det.js",
+    "eval:rec": "node eval_rec.js",
+    "speed": "node bench_speed.js",
+    "compare": "node compare.js",
+    "all": "node run_all.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
+}

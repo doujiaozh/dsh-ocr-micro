@@ -1,0 +1,12 @@
+# model_forge Python dependencies — pure-Python wheels only, no C++ builds.
+# Windows 7 + 8GB RAM friendly (CPU only). NOTE: onnxruntime is deliberately
+# NOT here — its native DLL needs Win8+ API sets and does not load on Win7;
+# the whole forge pipeline (quantize/prune/convert) is pure onnx + numpy.
+
+onnx>=1.14,<1.17
+numpy>=1.24,<2.0
+paddle2onnx>=1.1.0    # only needed for the Paddle-tar fallback path of download.js
+
+# NOTE: torch is NOT installed here and NOT needed on the Win7 box.
+# It is only used by distill.py, which must run on a CLOUD GPU box:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu118

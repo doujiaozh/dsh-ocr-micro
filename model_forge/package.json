@@ -1,0 +1,17 @@
+{
+  "name": "@dsh-ocr/model-forge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "模型锻造 (Model Forge): download / convert / quantize / prune PP-OCRv4 mobile models under a 5.5MB budget.",
+  "main": "download.js",
+  "scripts": {
+    "download": "node download.js",
+    "verify": "node verify_onnx.js"
+  },
+  "dependencies": {
+    "tar": "^6"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

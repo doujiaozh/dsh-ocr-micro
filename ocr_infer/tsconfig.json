@@ -1,0 +1,7 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/ocr_infer"
+  },
+  "include": ["src/**/*.ts"]
+}

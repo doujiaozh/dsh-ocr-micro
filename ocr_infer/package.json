@@ -1,0 +1,17 @@
+{
+  "name": "@dsh-ocr/ocr-infer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DSH OCR Micro inference core: DB detection + CRNN/SVTR recognition with CTC decoding and deterministic post-correction, on ONNX Runtime.",
+  "license": "Apache-2.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "cli": "node ../../dist/ocr_infer/src/cli.js"
+  },
+  "dependencies": {
+    "onnxruntime-web": "^1.20.0"
+  },
+  "optionalDependencies": {
+    "onnxruntime-node": "^1.18.0"
+  }
+}
