@@ -10,3 +10,23 @@ __pycache__/
 .DS_Store
 # regenerable synthetic benchmark images (benchmark/gen_synth.py)
 benchmark/data/
+Thumbs.db
+desktop.ini
+*.bak
+*.swp
+*.exe
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.iml
+build/
+out/
+.next/
+coverage/
+*.tsbuildinfo
+.npm/
+.pnpm-store/
+yarn-error.log
+*.tgz

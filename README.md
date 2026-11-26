@@ -148,3 +148,11 @@ Apache-2.0。模型源自 PaddleOCR / oar-ocr 生态（Apache-2.0），仅再分
 ---
 
 *Built by the DeepSeek Harness Agent Team — 在 5.5MB 的牢笼里，卷出世界级精度。*
+
+## Run
+
+This project does not declare a run script. Use the usage section above or load the built artifact in the target runtime.
+
+## License
+
+Released under the Apache-2.0 license. See LICENSE for details.
